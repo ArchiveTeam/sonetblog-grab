@@ -530,6 +530,9 @@ wget.callbacks.httploop_result = function(url, err, http_stat)
     io.stdout:flush()
     tries = tries + 1
     local maxtries = 11
+    if status_code == 404 then
+      maxtries = 2
+    end
     if tries > maxtries then
       io.stdout:write(" Skipping.\n")
       io.stdout:flush()
