@@ -600,8 +600,8 @@ wget.callbacks.finish = function(start_time, end_time, wall_time, numurls, total
   end
   file:close()
   for key, data in pairs({
-    ["sonetblog-"] = discovered_items,
-    ["urls-"] = discovered_outlinks
+    ["sonetblog-27eu8jovcykxzqis"] = discovered_items,
+    ["urls-q3zu66iizfevcsfb"] = discovered_outlinks
   }) do
     print("queuing for", string.match(key, "^(.+)%-"))
     local items = nil
