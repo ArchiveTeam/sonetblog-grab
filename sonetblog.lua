@@ -203,8 +203,8 @@ allowed = function(url, parenturl)
     return false
   end
 
-  if not string.match(url, "^https?://[^/]*%.blog%.ss%-blog%.jp/")
-    and not string.match(url, "^https?://[^/]*%.blog%.so%-net%.ne%.jp/") then
+  if not string.match(url, "^https?://[^/]*blog%.ss%-blog%.jp/")
+    and not string.match(url, "^https?://[^/]*blog%.so%-net%.ne%.jp/") then
     discover_item(discovered_outlinks, string.match(percent_encode_url(url), "^([^%s]+)"))
     return false
   end
@@ -530,8 +530,8 @@ wget.callbacks.httploop_result = function(url, err, http_stat)
     io.stdout:flush()
     tries = tries + 1
     local maxtries = 11
-    if status_code == 404 then
-      maxtries = 2
+    if status_code == 404 or item_type == "asset" then
+      maxtries = 0
     end
     if tries > maxtries then
       io.stdout:write(" Skipping.\n")
