@@ -305,8 +305,8 @@ project = Project(
     title=TRACKER_ID,
     project_html='''
         <img class="project-logo" alt="Project logo" src="https://wiki.archiveteam.org/images/9/91/Sonet_logo.gif" height="50px" title=""/>
-        <h2>ss-blog <span class="links"><a href="https://blog.ss-blog.jp/">Website</a> &middot; <a href="http://tracker.archiveteam.org/sonetblog/">Leaderboard</a> &middot; <a href="https://wiki.archiveteam.org/index.php/">Wiki</a></span></h2>
-        <p>Archiving ss-blog.</p>
+        <h2>ss-blog <span class="links"><a href="https://blog.ss-blog.jp/">Website</a> &middot; <a href="http://tracker.archiveteam.org/sonetblog/">Leaderboard</a> &middot; <a href="https://wiki.archiveteam.org/index.php/SSブログ">Wiki</a></span></h2>
+        <p>Archiving SSブログ.</p>
     '''
 )
 
