@@ -478,6 +478,7 @@ wget.callbacks.write_to_warc = function(url, http_stat)
       or (
         not string.match(url["url"], "/robots.txt$")
         and not allowed(urlparse.absolute(url["url"], http_stat["newloc"]))
+        and not string.match(urlparse.absolute(url["url"], http_stat["newloc"]), "^https?://[^/]*seesaa%.net/.")
       )
     )
     and (
